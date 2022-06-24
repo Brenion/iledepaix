@@ -1,17 +1,13 @@
 import SearchForm from './components/SearchForm'
-
+import ListInfo from './components/ListInfo'
 const Page = () => {
     
     
     
     return(
-        <div>
+        <div className='flex'>
             <SearchForm/>
-            <div className="grid grid-cols-2 w-1/3 h-30">
-                <ul>
-
-                </ul>
-            </div>
+            <ListInfo/>
         </div>
     )
 }

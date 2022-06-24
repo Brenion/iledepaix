@@ -15,11 +15,11 @@ console.log(name);
 const Search = () => {
 
     return(
-        <div className="w-80 bg-red-200 rounded-md m-4 h-full">
+        <div className="w-80 bg-[#b27d71] rounded-md m-4 h-full">
             <form action="" className="flex flex-col w-20">
                 <div className="flex">
                     
-                <input type="text" name="" id="test" placeholder="Recherche" className="ml-2 rounded-md" />
+                <input type="text" name="" id="test" placeholder="Recherche" className="ml-2 rounded-md mt-2" />
                         </div>
                 
                 
@@ -55,7 +55,7 @@ const Search = () => {
             </form>
                 <button
                     type="button"
-                    className="px-4 p-1 mt-4 ml-2 text-white bg-indigo-600 rounded-sm"
+                    className="px-4 p-1 mt-4 ml-2  mb-2 text-white bg-gray-500 rounded-sm"
                     onClick={getData}>
                         Rechercher
                 </button>
