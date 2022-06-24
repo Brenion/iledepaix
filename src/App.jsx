@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import NavBar from './components/navBar.jsx'
+import SearchForm from './components/SearchForm'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         
       </header>
       <NavBar/>
+      <SearchForm/>
     </div>
   );
 }
