@@ -55,3 +55,16 @@ a {
 input {
   @apply text-gray-800 px-2 py-1;
 }
+
+div{
+  display: flex;
+  flex-direction: column;
+}
+.div{
+  display: block;
+}
+
+input{
+  @apply rounded-md w-56;
+  
+}

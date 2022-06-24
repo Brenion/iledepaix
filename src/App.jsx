@@ -1,4 +1,6 @@
+
 import './App.css';
+import FormTool from './components/FormTool';
 
 function App() {
   return (
@@ -8,6 +10,9 @@ function App() {
         <p className='text-red-600 text-2xl'>Welcome to ile de paix</p>
       </div>
       </header>
+      <main>
+        <FormTool/>
+      </main>
     </div>
   );
 }
