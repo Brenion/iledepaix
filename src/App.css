@@ -50,3 +50,19 @@ a {
 input {
   @apply text-gray-800 px-2 py-1;
 }
+
+.lightBrown {
+  background-color: #CBABA2;
+}
+
+.darkBrown {
+  background-color: #b27d71
+}
+
+.darkerBrown {
+  background-color: #75534b
+}
+
+.beige{
+  background-color: #cba89e
+}

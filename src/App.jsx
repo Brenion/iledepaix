@@ -1,4 +1,5 @@
 import './App.css';
+import FormNewNGO from './components/FormNewNGO'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <p className='text-red-600 text-2xl'>Welcome to ile de paix</p>
       </div>
       </header>
+      <FormNewNGO/>
     </div>
   );
 }

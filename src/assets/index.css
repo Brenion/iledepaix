@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -54,4 +45,20 @@ a {
 
 input {
   @apply text-gray-800 px-2 py-1;
+}
+
+.lightBrown {
+  background-color: #CBABA2;
+}
+
+.darkBrown {
+  background-color: #b27d71
+}
+
+.darkerBrown {
+  background-color: #75534b
+}
+
+.beige{
+  background-color: #cba89e
 }
