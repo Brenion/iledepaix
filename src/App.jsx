@@ -1,16 +1,16 @@
 import './App.css';
 import React from 'react';
 import NavBar from './components/navBar.jsx'
-import SearchForm from './components/SearchForm'
+import Page from './Page'
 
-function App() {
+function App(TableTest) {
   return (
     <div className="App">
       <header className="App-header">
         
-      </header>
       <NavBar/>
-      <SearchForm/>
+      </header>
+      <Page/>
     </div>
   );
 }

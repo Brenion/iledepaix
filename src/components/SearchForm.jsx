@@ -15,37 +15,37 @@ console.log(name);
 const Search = () => {
 
     return(
-        <div className="w-80 bg-red-200">
+        <div className="w-80 bg-red-200 rounded-md m-4 h-full">
             <form action="" className="flex flex-col w-20">
                 <div className="flex">
                     
-                <input type="text" name="" id="test" placeholder="Recherche" className="ml-2" />
+                <input type="text" name="" id="test" placeholder="Recherche" className="ml-2 rounded-md" />
                         </div>
                 
                 
 
-                <select id = "dropdown" className="mt-4 ml-2">
+                <select id = "dropdown" className="mt-4 ml-2 rounded-md text-black">
                 <option value="N/A" >Tag:</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
             </select>
-                <select id = "dropdown2" className="mt-4 ml-2">
+                <select id = "dropdown2" className="mt-4 ml-2 rounded-md text-black">
                 <option value="N/A" >Public</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
             </select>
-                <select id = "dropdown3" className="mt-4 ml-2">
+                <select id = "dropdown3" className="mt-4 ml-2 rounded-md text-black">
                 <option value="N/A" >Type d'outil</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
             </select>
-                <select id = "dropdown4" className="mt-4 ml-2">
+                <select id = "dropdown4" className="mt-4 ml-2 rounded-md text-black">
                 <option value="N/A" >Format</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -55,7 +55,7 @@ const Search = () => {
             </form>
                 <button
                     type="button"
-                    className="px-4 p-1 mt-4 ml-2 text-white bg-indigo-600"
+                    className="px-4 p-1 mt-4 ml-2 text-white bg-indigo-600 rounded-sm"
                     onClick={getData}>
                         Rechercher
                 </button>
