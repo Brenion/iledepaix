@@ -4,24 +4,40 @@ import pagesConfig from './pagesConfig';
 
 const NavBar = ({ title, children, currentPage }) => {
   return (
-    <div className="flex flex-col">
-      <header className="flex items-center m-4 p-4 bg-yellow-800 rounded-md border-2 border-yellow-800 shadow-lg">
-        <img src="" alt="react image" />
-        <nav>
-          <ul className="flex text-2xl text-red-200 m-4">
+    <div>
+      <header className="flex p-4 bg-[#efdddc]">
+        
+        <nav className="flex justify-around font-bold w-full">
+           
+          <div className="flex items-center">
+            <img src="" alt="ile de paix" />
+          <ul className="flex text-xl m-4 items-center ">
             {pagesConfig.map((page) => (
-              <li className="m-2" key={page.id}>
+              <li className="m-2 text-[#b27d71]" key={page.id}>
                 
                   <a href={page.url}
-                    className={
-                      currentPage === `${page.currentPage}` ? 'font-bold' : undefined
-                    }>
+                    >
                     {page.name}
                   </a>
                 
               </li>
             ))}
           </ul>
+          </div> 
+         <div>
+          <ul className="flex text-xl m-4 items-center">
+             <li className="m-2 p-2 bg-[#b27d71] text-white rounded-3xl" >   
+                  <a href="/">
+                   faire un don
+                  </a>     
+            </li>
+             <li className="m-2 text-[#b27d71]" >   
+                  <a href="/">
+                   Connection
+                  </a>     
+              </li>
+            </ul>
+          </div> 
         </nav>
       </header>
       <main className="mx-auto">{children}</main>

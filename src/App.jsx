@@ -4,8 +4,8 @@ import NavBar from './components/navBar.jsx'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="bg-white">
+      <header className="bg-white">
         
       </header>
       <NavBar/>
