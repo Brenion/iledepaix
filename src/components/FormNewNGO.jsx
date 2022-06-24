@@ -23,7 +23,7 @@ const formNewNGO = () => (
             <label htmlFor="" className="px-2 block">Site web:</label>
             <input type="url"  className="px-2 py-1 m-2 rounded block" />
             </div>
-            <button className="p-2 m-4 rounded bg-[#b27d71] hover:bg-[#75534b] hover:dark text-white">Enregistrer</button>
+            <button className="p-2 m-4 rounded bg-[#b27d71] hover:bg-[#75534b] text-white">Enregistrer</button>
         </form>
         </div>
     </div>
