@@ -1,6 +1,6 @@
 import './App.css';
-import React from 'react';
-import NavBar from './components/navBar.jsx'
+import FormNewNGO from './components/FormNewNGO'
+import NavBar from './components/navBar'
 
 function App() {
   return (
@@ -8,7 +8,8 @@ function App() {
       <header className="bg-white">
         
       </header>
-      <NavBar/>
+      <NavBar />
+      <FormNewNGO/>
     </div>
   );
 }
