@@ -13,7 +13,7 @@ const NavBar = ({ title, children, currentPage }) => {
             <img src="" alt="ile de paix" />
           <ul className="flex text-xl m-4 items-center ">
             {pagesConfig.map((page) => (
-              <li className="m-2 text-[#b27d71]" key={page.id}>
+              <li className="m-2 text-[#b27d71] duration-200 hover:text-black" key={page.id}>
                 
                   <a href={page.url}
                     >
@@ -26,12 +26,12 @@ const NavBar = ({ title, children, currentPage }) => {
           </div> 
          <div>
           <ul className="flex text-xl m-4 items-center">
-             <li className="m-2 p-2 bg-[#b27d71] text-white rounded-3xl" >   
+             <li className="m-2 p-2 bg-[#b27d71] text-white rounded-3xl " >   
                   <a href="/">
                    faire un don
                   </a>     
             </li>
-             <li className="m-2 text-[#b27d71]" >   
+             <li className="m-2 text-[#b27d71] duration:200 hover:text-black" >   
                   <a href="/">
                    Connection
                   </a>     
