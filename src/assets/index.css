@@ -8,7 +8,7 @@ code {
 }
 
 body {
-  @apply m-0 p-0 bg-gray-800 font-sans text-white;
+  @apply m-0 p-0 font-sans text-white;
 }
 
 h1 {
