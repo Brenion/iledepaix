@@ -56,7 +56,7 @@ const Search = () => {
    
 
     return(
-        <div className="w-80 bg-[#b27d71] rounded-md m-4 h-full">
+        <div className="w-80 bg-[#efdddc] rounded-md m-4 h-full">
             <form action="" className="flex flex-col w-20" onSubmit={handleSubmit}>
                 <div className="flex">
                     

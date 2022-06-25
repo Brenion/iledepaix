@@ -9,7 +9,6 @@ specifiers:
   eslint-config-prettier: ^8.5.0
   format: prettier "src/**/*.{js,html}" --write
   formik: ^2.2.9
-  lint: eslint "src/**/*.{js,jsx}" --quiet
   postcss: ^8.4.14
   prettier: ^2.7.1
   react: ^18.2.0
@@ -26,7 +25,6 @@ dependencies:
   '@testing-library/react': 13.3.0_react-dom@18.2.0+react@18.2.0
   '@testing-library/user-event': 13.5.0
   format: link:prettier "src/**/*.{js,html}" --write
-  lint: link:eslint "src/**/*.{js,jsx}" --quiet
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-router-dom: 6.3.0_react-dom@18.2.0+react@18.2.0
@@ -5229,13 +5227,11 @@ packages:
       '@babel/runtime': 7.18.3
     dev: false
 
-
   /hoist-non-react-statics/3.3.2:
     resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
     dependencies:
       react-is: 16.13.1
-      
-      
+
   /hoopy/0.1.4:
     resolution: {integrity: sha512-HRcs+2mr52W0K+x8RzcLzuPPmVIKMSv97RGHy0Ea9y/mpcaK+xTrjICA04KAHi4GRzxliNqNJEFYWHghy3rSfQ==}
     engines: {node: '>= 6.0.0'}

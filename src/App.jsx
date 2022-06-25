@@ -20,12 +20,12 @@ function App() {
       </div>
       </header>
       
-        <FormTool/>
       
       <header className="App-header">
         <BrowserRouter>
-          
         <NavBar>
+        <FormTool/>
+          
             <Routes>
               <Route path="Page" element={<Page />} />
               <Route path="FormConnect" element={<FormConnect />} />
