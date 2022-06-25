@@ -10,7 +10,7 @@
 }
 
 body {
-  @apply font-sans ;
+  @apply font-sans bg-[#b27d71];
 }
 
 h1 {

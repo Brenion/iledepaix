@@ -1,117 +1,219 @@
-const FormTool = () => (
-    <div className="flex justify-center mt-8">
-        <div className="flex flex-col bg-[#cbaba2] w-3/4 justify-center p-4 rounded text-black">
-            <h1 className="my-8 text-3xl font-bold pl-6 underline text-center">Formulaire d'outil</h1>
-            <form className="flex flex-col items-center">
-                <div className="flex flex-col w-64">
-                    <label htmlFor="title">Titre de l'outil</label>
-                    <textarea name="title" id="title" cols="30" rows="2" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block">Ecrire ici !</textarea>
+import { useState } from "react";
+import Select from 'react-select'
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+
+
+const FormTool = () => {
+
+
+
+
+const options = [
+  { value: 'food', label: 'Agriculture et alimentation' },
+  { value: 'commerce', label: 'Commerce équitable' },
+  { value: 'droit', label: "Droits de l'enfant et droits humain"},
+  { value: 'developper', label: "Développement durable"},
+  { value: 'education', label: "Êducation à la diversité"},
+  { value: 'water', label: "Environnement, eau et climat"},
+  { value: 'genre', label: "Genre"},
+  { value: 'pice', label: "Conflits et paix"},
+  { value: 'handicap', label: "Handicap"},
+  { value: 'migrate', label: "Migrations et réfugiés"},
+  { value: 'world', label: "Mondialisation"},
+  { value: 'value', label: "Valeur"},
+]
+
+const MyComponent = () => (
+  <Select options={options} />
+)
+
+const formik = useFormik({
+    initialValues: {
+        Name:"",
+        Subtitle:"",
+        IsDigitalTool:"",
+        IsNewTool:"",
+        MinAge:"",
+        MaxAge:"",
+        ToolType:"",
+        StartDate: "",
+        EndDate: "",
+        Price:"",
+        Description:"",
+        Thematics: [],
+    },
+    validationSchema: Yup.object({
+      Name: Yup.string().required("Le titre de l'outil est requis").max(50, "Le titre doit faire maximum 50 caractères"),
+      Subtitle: Yup.string().required("Le sous-titre est requis"),
+      IsDigitalTool: Yup.string().required('Vous devez faire un choix'),
+      IsNewTool: Yup.string().required('Vous devez faire un choix'),
+      MinAge: Yup.number(),
+      MaxAge: Yup.number(),
+      Price: Yup.number(),
+      ToolType: Yup.string().required("Le type d'outil est requis"),
+      StartDate: Yup.date(),
+      EndDate: Yup.date(),
+      Description: Yup.string().required('Le type est requis'),
+      Thematics: Yup.array().min(1),
+    }),
+    onSubmit: (values) => {
+      console.log(values);
+    },
+  });
+
+
+  const buttonQuiAfficheLesDonnesDuFormulaire = () => {
+    console.log(formik.values);
+  }
+
+
+// const handleChange = (e) => {
+//     const val = e.target.value;
+//     const key = e.target.name;
+
+//     setSignup((prev) => {
+//       const newState = {
+//         ...prev,
+//         [key]: val,
+//       };
+
+//       return newState;
+//     });
+//   };
+
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+        
+        
+    //   };
+
+return(
+    <div className="flex justify-center mt-8 mb-8" >
+        <div className="flex flex-col bg-[#efdddc] w-3/2 justify-center p-4 rounded text-gray-800 items-center">
+            <h1 className="my-8 text-3xl font-bold underline text-center">Formulaire d'outil</h1>
+            <form className="grid grid-cols-2 gap-x-8 mx-12" onSubmit={formik.handleSubmit}>
+                <div className="flex flex-col w-64 relative">
+                    <label htmlFor="Name">Titre de l'outil</label>
+                    <input type="text" name="Name" id="Name" value={formik.values.Name} onChange={formik.handleChange} 
+              onBlur={formik.handleBlur} className="px-2 py-1 my-2 rounded focus:outline-yellow-600 block" />
+                    {formik.touched.Name && formik.errors.Name && (
+                        <div className="absolute -bottom-3 text-sm text-red-600">
+                            {formik.errors.Name}
+                        </div>
+                    )}
                 </div>
-                <div className="flex flex-col w-64">
-                    <label htmlFor="subtitle">Sous-titre</label>
-                    <textarea name="subtitle" id="subtitle" cols="30" rows="2" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block">Ecrire ici !</textarea>
+                <div className="flex flex-col w-64 relative">
+                    <label htmlFor="Subtitle">Sous-titre</label>
+                    <input type="text" name="Subtitle" id="Subtitle" value={formik.values.Subtitle} onChange={formik.handleChange} 
+                onBlur={formik.handleBlur} className="px-2 py-1 my-2 rounded focus:outline-yellow-600 block" />
+                    {formik.touched.Subtitle && formik.errors.Subtitle && (
+                        <div className="absolute -bottom-3 text-sm text-red-600">
+                            {formik.errors.Subtitle}
+                        </div>
+                    )}
                 </div>
-                <div className="flex flex-col w-64">
+                <div className="flex flex-col w-64 relative mt-2">
                     <h4 className="my-2">S'agit-il d'un outil numérique ?</h4>
                     <div className="flex">
-                        <input type="radio" name="title" id="title" className="mr-2 px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                        <label htmlFor="title" className="mr-6">Oui</label>
-                        <input type="radio" name="title" id="title" className="mr-2 px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                        <label htmlFor="title">Non</label>
+                        <input type="radio" name="IsDigitalTool" id="toolNumYes" value="true" onChange={formik.handleChange} className="mr-2 px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
+                        <label htmlFor="toolNumYes" className="mr-6">Oui</label>
+                        <input type="radio" name="IsDigitalTool" id="titleNumNo" value="no" onChange={formik.handleChange} className="mr-2 px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
+                        <label htmlFor="titleNumNo">Non</label>
                     </div>
+                    {formik.touched.IsDigitalTool && formik.errors.IsDigitalTool && (
+                        <div className="absolute -bottom-3 text-sm text-red-600">
+                            {formik.errors.IsDigitalTool}
+                        </div>
+                    )}
                 </div>
-                <div className="flex flex-col w-64">
+                <div className="flex flex-col w-64 relative mt-2">
                     <h4 className="my-2">S'agit-il d'un nouvel outil ?</h4>
                     <div className="flex">
-                        <input type="radio" name="title" id="title" className="mr-2 px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                        <label htmlFor="title" className="mr-6">Oui</label>
-                        <input type="radio" name="title" id="title" className="mr-2 px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                        <label htmlFor="title">Non</label>
+                        <input type="radio" name="IsNewTool" id="toolNewYes" value="true" onChange={formik.handleChange} className="mr-2 px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
+                        <label htmlFor="toolNewYes" className="mr-6">Oui</label>
+                        <input type="radio" name="IsNewTool" id="toolNewNo" value="no" onChange={formik.handleChange} className="mr-2 px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
+                        <label htmlFor="toolNewNo">Non</label>
+                    </div>
+                    {formik.touched.IsNewTool && formik.errors.IsNewTool && (
+                        <div className="absolute -bottom-3 text-sm text-red-600">
+                            {formik.errors.IsNewTool}
+                        </div>
+                    )}
+                </div>
+                <div className="flex flex-col w-64 relative mt-2">
+                    <label htmlFor="MinAge">Âge :</label>
+                    <input type="number" id="MinAge" name="MinAge" value={formik.values.MinAge} onChange={formik.handleChange} min="0" max="18"
+                onBlur={formik.handleBlur} className="px-2 py-1 my-2 rounded focus:outline-yellow-600 block" />
+                    {formik.touched.MinAge && formik.errors.MinAge && (
+                        <div className="absolute -bottom-3 text-sm text-red-600">
+                            {formik.errors.MinAge}
+                        </div>
+                    )}
+                </div>
+                <div className="flex flex-col w-64 relative mt-2">
+                    <label htmlFor="ToolType">Type d'outil :</label>
+                    <input type="text" onChange={formik.handleChange} id="ToolType" name="ToolType" value={formik.values.ToolType} 
+                onBlur={formik.handleBlur} className="px-2 py-1 my-2 rounded focus:outline-yellow-600 block" />
+                    {formik.touched.ToolType && formik.errors.ToolType && (
+                        <div className="absolute -bottom-3 text-sm text-red-600">
+                            {formik.errors.ToolType}
+                        </div>
+                    )}
+                </div>
+                <div className="flex flex-col w-64 relative mt-2">
+                    <label htmlFor="StartDate">Date de début :</label>
+                    <input type="date" id="StartDate" name="StartDate" value={formik.values.StartDate} onChange={formik.handleChange} 
+                    onBlur={formik.handleBlur} className="px-2 py-1 my-2 rounded focus:outline-yellow-600 block" />
+                    {formik.touched.StartDate && formik.errors.StartDate && (
+                        <div className="absolute -bottom-3 text-sm text-red-600">
+                            {formik.errors.StartDate}
+                        </div>
+                    )}
+                </div>
+                <div className="flex flex-col w-64 relative mt-2">
+                    <label htmlFor="EndDate">Date de fin :</label>
+                    <input type="date" id="EndDate" name="EndDate" value={formik.values.EndDate} onChange={formik.handleChange} 
+                    onBlur={formik.handleBlur} className="px-2 py-1 my-2 rounded focus:outline-yellow-600 block" />
+                    {formik.touched.EndDate && formik.errors.EndDate && (
+                        <div className="absolute -bottom-3 text-sm text-red-600">
+                            {formik.errors.EndDate}
+                        </div>
+                    )}
+                </div>
+                <div className="flex flex-col w-64 relative">
+                    <p>Thématiques abordées dans l'outils <br />
+                    (Merci de cocher les thématiques abordées)</p>
+                    <div className="mb-4">
+                        <MyComponent/>
                     </div>
                 </div>
-                <div className="flex flex-col w-64">
-                    <label htmlFor="age">Âge :</label>
-                    <input type="number" id="age" name="age" min="0" max="18" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"></input>
-                </div>
-                <div className="flex flex-col w-64">
-                    <label htmlFor="typeTool" >Type d'outil :</label>
-                    <input type="text" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                </div>
-                <div className="flex flex-col w-64">
-                    <label htmlFor="typeTool">Type d'outil :</label>
-                    <input type="text" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                </div>
-                <div className="flex flex-col w-64">
-                    <label htmlFor="duration">Durée :</label>
-                    <input type="month" id="duration" name="duration" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"></input>
-                </div>
-                <div className="flex flex-col w-64">
+                <div className="flex flex-col w-64 relative mt-10">
                     <label htmlFor="Price">Prix :</label>
-                    <input type="text" id="Price" name="Price" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"></input>
+                    <input type="number" id="Price" name="Price" value={formik.values.Price} onChange={formik.handleChange} 
+                    onBlur={formik.handleBlur} className="px-2 py-1 my-2 rounded focus:outline-yellow-600 block" />
+                    {formik.touched.Price && formik.errors.Price && (
+                        <div className="absolute -bottom-3 text-sm text-red-600">
+                            {formik.errors.Price}
+                        </div>
+                    )}
                 </div>
-                <div className="flex flex-col w-64">
-                    <label htmlFor="description">Description</label>
-                    <textarea name="description" id="description" cols="30" rows="2" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"></textarea>
+                <div className="flex flex-col w-64 relative">
+                    <label htmlFor="Description">Description</label>
+                    <textarea type="text" name="Description" id="Description" value={formik.values.Description} onChange={formik.handleChange} cols="30" rows="2" 
+                    onBlur={formik.handleBlur} className="px-2 py-1 my-2 rounded focus:outline-yellow-600 block"/>
+                    {formik.touched.Description && formik.errors.Description && (
+                        <div className="absolute -bottom-3 text-sm text-red-600">
+                            {formik.errors.Description}
+                        </div>
+                    )}
+                <button type="submit" className="bg-[#b27d71] hover:bg-[#755342] p-2 rounded text-white" onClick={buttonQuiAfficheLesDonnesDuFormulaire}>Enregistrer</button>
                 </div>
-                <div>
-                    <h4 className="my-4 text-xl ">Thématiques abordées dans l'outils <br />
-                    (Merci de cocher les thématiques abordées)</h4>
-                    
-                    <div className="flex">
-
-                        <input type="checkbox" id="thematique1" name="thematique1" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                        <label htmlFor="thematique1">Agriculture et alimentation</label>
-                    </div>
-                    <div className="flex">
-                        <input type="checkbox" id="thematique2" name="thematique2" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                        <label htmlFor="thematique2">Commerci équitable</label>
-                    </div>
-                    <div className="flex">
-                        <input type="checkbox" id="thematique3" name="thematique3" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                        <label htmlFor="thematique3">Droits de l'enfant et droits humain</label>
-                    </div>
-                    <div className="flex">
-                        <input type="checkbox" id="thematique4" name="thematique4" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                        <label htmlFor="thematique4">Développement durable</label>
-                    </div>
-                    <div className="flex">
-                        <input type="checkbox" id="thematique5" name="thematique5" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                        <label htmlFor="thematique5">Êducation à la diversité</label>
-                    </div>
-                    <div className="flex">
-                        <input type="checkbox" id="thematique6" name="thematique6" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                        <label htmlFor="thematique6">Environnement, eau et climat</label>
-                    </div>
-                    <div className="flex">
-                        <input type="checkbox" id="thematique7" name="thematique7" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                        <label htmlFor="thematique7">Genre</label>
-                    </div>
-                    <div className="flex">
-                        <input type="checkbox" id="thematique8" name="thematique8" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                        <label htmlFor="thematique8">Conflits et paix</label>
-                    </div>
-                    <div className="flex">
-                        <input type="checkbox" id="thematique9" name="thematique9" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                        <label htmlFor="thematique9">Handicap</label>
-                    </div>
-                    <div className="flex">
-                        <input type="checkbox" id="thematique10" name="thematique10" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                        <label htmlFor="thematique10">Migrations et réfugiés</label>
-                    </div>
-                    <div className="flex">
-                        <input type="checkbox" id="thematique11" name="thematique11" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                        <label htmlFor="thematique11">Mondialisation</label>
-                    </div>
-                    <div className="flex">
-                        <input type="checkbox" id="thematique12" name="thematique12" className="px-2 py-1 m-2 rounded focus:outline-yellow-600 block"/>
-                        <label htmlFor="thematique12">Valeurs</label>
-                    </div>
-                </div>
-                <button type="submit" className="bg-[#b27d71] hover:bg-[#755342] p-2 rounded text-white">Enregistrer</button>
             </form>
         </div>
     </div>
   );
-  
+}
   export default FormTool;
   
