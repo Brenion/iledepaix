@@ -2,14 +2,8 @@ import './App.css';
 import React from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import NavBar from './components/navBar.jsx'
-<<<<<<< HEAD
-import Page from './Page'
-import AdminCreate from './components/AdminCreate';
-import UpdatePasswordForm from './components/UpdatePasswordForm';
-=======
 import Page from './pages/Page'
 import FormConnect from './pages/FormConnect';
->>>>>>> main
 
 function App() {
   return (
@@ -25,13 +19,7 @@ function App() {
         </NavBar>
        </BrowserRouter>
       </header>   
-<<<<<<< HEAD
-      {/* <Page/>
-      // <AdminCreate></AdminCreate> */}
-      <UpdatePasswordForm/>
-=======
      
->>>>>>> main
     </div>
   );
 }
