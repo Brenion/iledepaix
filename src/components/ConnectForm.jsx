@@ -9,7 +9,11 @@ const ConnectForm = () => {
         <form action="" className="flex flex-col items-center">
             <input type="text" name="" id="" placeholder="Email" className="w-80" />
             <input type="text" name="" id="" placeholder="Password" className="w-80 mt-4" />
-            <button className="rounded-md bg-[#b27d71] w-32 h-14 text-white mt-4">Envoyer</button>
+            <div className="block">
+
+            <button className="rounded-2xl bg-[#b27d71] w-32 h-14 text-white mt-4">Envoyer</button>
+        <button className="bg-[#b27d71] rounded-2xl p-4 text-white ml-4">Nouvel utilisateur</button>
+            </div>
         </form>
         </div>
             </div>
