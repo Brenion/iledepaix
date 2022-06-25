@@ -10,7 +10,9 @@ const NavBar = ({ title, children, currentPage }) => {
         <nav className="flex justify-around font-bold w-full">
            
           <div className="flex items-center">
-            <img src="" alt="ile de paix" />
+            <a href="/">
+            <img src="public/saucisse.png" alt="ile de paix" />
+            </a>
           <ul className="flex text-xl m-4 items-center ">
             {pagesConfig.map((page) => (
               <li className="m-2 text-[#b27d71] duration-200 hover:text-black" key={page.id}>

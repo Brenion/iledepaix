@@ -2,8 +2,8 @@ import './App.css';
 import React from 'react';
 import NavBar from './components/navBar.jsx'
 import Page from './Page'
-import ConnectForm from './components/ConnectForm';
-import AdminForm from './components/AdminForm';
+
+
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <NavBar/>
       </header>   
       <Page/>
+
     </div>
   );
 }

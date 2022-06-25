@@ -1,15 +1,5 @@
 const getData = () =>{
-    const name = [
-        {
-        title:'Pabloe',
-        number:5
-    },
-        {
-        title:'Tito',
-        number:2
-    },
-]
-console.log(name);
+
 }
 
 const Search = () => {
