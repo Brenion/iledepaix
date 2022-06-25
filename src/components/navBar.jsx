@@ -26,7 +26,7 @@ const NavBar = ({ title, children, currentPage }) => {
           </div> 
          <div>
           <ul className="flex text-xl m-4 items-center">
-             <li className="m-2 p-2 bg-[#b27d71] text-white rounded-3xl " >   
+             <li className="m-2 py-2 px-6 bg-[#b27d71] text-white rounded-3xl " >   
                   <a href="/">
                    faire un don
                   </a>     
