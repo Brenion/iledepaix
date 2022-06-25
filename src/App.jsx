@@ -1,5 +1,5 @@
 import './App.css';
-import FormNewNGO from './components/FormNewNGO'
+import FormNewNGO from './components/newUser/FormNewNGO'
 import NavBar from './components/navBar'
 
 function App() {
@@ -9,7 +9,6 @@ function App() {
         
       </header>
       <NavBar />
-      <FormNewNGO/>
     </div>
   );
 }

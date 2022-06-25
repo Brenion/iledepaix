@@ -32,7 +32,7 @@ const NavBar = ({ title, children, currentPage }) => {
                   </a>     
             </li>
              <li className="m-2 text-[#b27d71] duration:200 hover:text-black" >   
-                  <a href="/">
+                  <a href="/userConnection">
                    Connection
                   </a>     
               </li>
