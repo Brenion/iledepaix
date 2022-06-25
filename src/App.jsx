@@ -32,6 +32,7 @@ function App() {
           </Routes>
         </NavBar>
        </BrowserRouter>
+    
       </header>   
      
     </div>
