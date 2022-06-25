@@ -1,14 +1,10 @@
 import React from "react";
 import { UseState } from "react";
 import { Link } from "react-router-dom";
-import { UseForm } from "../hooks/useForm";
-import { useAuth } from "../lib/auth";
 
 const FormNewNGO = () => {
-  const { register } = useAuth();
-  const { values, onChange } = UseForm({});
-  const [error, setError] = UseState(null);
-
+  const [error] = UseState(null);
+  const onChange = "";
   return (
     <div className="flex justify-center">
       <div className="flex flex-col bg-[#CBABA2] w-3/4 justify-center p-4 rounded text-black">
@@ -18,12 +14,6 @@ const FormNewNGO = () => {
         <form
           onSubmit={async (e) => {
             e.preventDefault();
-            try {
-              await register(values);
-            } catch (err) {
-              console.log("error");
-              setError(err);
-            }
           }}
         >
           <div className="flex flex-col items-center">

@@ -10,7 +10,7 @@ const Logout = () => {
   useEffect(() => {
     logout();
     setIsConnect(false);
-    navigate("/FormNewNGO");
+    navigate("/ConnectForm");
   });
   return <div />;
 };
