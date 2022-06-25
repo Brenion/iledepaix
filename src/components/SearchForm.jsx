@@ -1,25 +1,15 @@
-const getData = () =>{
-    const name = [
-        {
-        title:'Pabloe',
-        number:5
-    },
-        {
-        title:'Tito',
-        number:2
-    },
-]
-console.log(name);
-}
+import { useState } from "react";
+
 
 const Search = () => {
+    
 
     return(
         <div className="w-80 bg-[#b27d71] rounded-md m-4 h-full">
             <form action="" className="flex flex-col w-20">
                 <div className="flex">
                     
-                <input type="text" name="" id="test" placeholder="Recherche" className="ml-2 rounded-md mt-2" />
+                <input type="text" name="infos" id="infos" placeholder="Recherche" className="ml-2 rounded-md mt-2 w-20"   />
                         </div>
                 
                 
@@ -54,9 +44,9 @@ const Search = () => {
             </select>
             </form>
                 <button
-                    type="button"
-                    className="px-4 p-1 mt-4 ml-2  mb-2 text-white bg-gray-500 rounded-sm"
-                    onClick={getData}>
+                    
+                    type="submit"
+                    className="px-4 p-1 mt-4 ml-2  mb-2 text-white bg-gray-500 rounded-sm">
                         Rechercher
                 </button>
 
@@ -64,5 +54,7 @@ const Search = () => {
         </div>
     )
 }
+
+
 
 export default Search
