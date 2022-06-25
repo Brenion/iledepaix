@@ -1,15 +1,16 @@
 import './App.css';
-import FormNewNGO from './components/FormNewNGO'
-import NavBar from './components/navBar'
+import React from 'react';
+import NavBar from './components/navBar.jsx'
+import Page from './Page'
+
 
 function App() {
   return (
-    <div className="bg-white">
-      <header className="bg-white">
-        
-      </header>
-      <NavBar />
-      <FormNewNGO/>
+    <div className="App">
+      <header className="App-header">
+      <NavBar/>
+      </header>   
+      <Page/>
     </div>
   );
 }
