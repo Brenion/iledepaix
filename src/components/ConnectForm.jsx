@@ -1,6 +1,8 @@
-const ConnectForm = () =>{
-    return(
-        <div className="flex justify-center mt-80">
+
+const ConnectForm = () => {
+    return (
+       
+        <div className="flex justify-center mt-8">
 
         <div className="bg-[#efdddc] flex flex-col w-1/2 h-60 justify-center items-center  border border-gray-400 rounded-md">
             <h2 className="text-yellow-600 text-2xl mb-2">Connection</h2>
@@ -10,7 +12,8 @@ const ConnectForm = () =>{
             <button className="rounded-md bg-[#b27d71] w-32 h-14 text-white mt-4">Envoyer</button>
         </form>
         </div>
-        </div>
+            </div>
+       
     )
 }
 
