@@ -3,15 +3,15 @@ import React from 'react';
 import NavBar from './components/navBar.jsx'
 import Page from './Page'
 import ConnectForm from './components/ConnectForm';
+import AdminForm from './components/AdminForm';
 
-function App(TableTest) {
+function App() {
   return (
     <div className="App">
       <header className="App-header">
-     <ConnectForm></ConnectForm>   
-      {/* <NavBar/> */}
-      </header>
-      {/* <Page/> */}
+      <NavBar/>
+      </header>   
+      <Page/>
     </div>
   );
 }
