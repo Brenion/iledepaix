@@ -1,14 +1,25 @@
 import './App.css';
-import FormNewNGO from './components/newUser/FormNewNGO'
-import NavBar from './components/navBar'
+import React from 'react';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import NavBar from './components/navBar.jsx'
+import Page from './pages/Page'
+import FormConnect from './pages/FormConnect';
 
 function App() {
   return (
-    <div className="bg-white">
-      <header className="bg-white">
-        
-      </header>
-      <NavBar />
+    <div className="App">
+      <header className="App-header">
+        <BrowserRouter>
+          
+        <NavBar>
+            <Routes>
+              <Route path="Page" element={<Page />} />
+              <Route path="FormConnect" element={<FormConnect />} />
+          </Routes>
+        </NavBar>
+       </BrowserRouter>
+      </header>   
+     
     </div>
   );
 }
