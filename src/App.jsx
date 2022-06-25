@@ -3,6 +3,7 @@ import React from 'react';
 import NavBar from './components/navBar.jsx'
 import Page from './Page'
 import AdminCreate from './components/AdminCreate';
+import UpdatePasswordForm from './components/UpdatePasswordForm';
 
 function App() {
   return (
@@ -10,8 +11,9 @@ function App() {
       <header className="App-header">
       <NavBar/>
       </header>   
-      <Page/>
-      <AdminCreate></AdminCreate>
+      {/* <Page/>
+      // <AdminCreate></AdminCreate> */}
+      <UpdatePasswordForm/>
     </div>
   );
 }

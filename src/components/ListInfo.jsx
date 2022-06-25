@@ -2,7 +2,7 @@ const ListInfo = () =>{
     
     return (
         <div>
-                <div className='bg-[#b27d71]   rounded-md ml-4 my-4 h-40 mr-16 '>
+                <div className='bg-[#b27d71]   rounded-md ml-4 my-4 h-60 mr-16 '>
                     <div className="ml-4">
                  
                         <h2 className="text-white mb-4">Titre de l'outil</h2>
