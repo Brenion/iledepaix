@@ -1,7 +1,7 @@
 const AdminCreate = () =>{
     return(
         <div className="w-3/4 m-auto">
-            <form action="" className="flex flex-col bg-[#b27d71] justify-center h-80 items-center">
+            <form action="" className="flex flex-col bg-[#b27d71] justify-center h-80 items-center rounded-3xl">
                 <span className=" mt-2">Nom:</span>
                 <input type="text" name="" id="" placeholder="Name" className="w-1/4 mt-2 rounded-md"/>
                 <span className=" mt-2">Email:</span>

@@ -2,8 +2,7 @@ import './App.css';
 import React from 'react';
 import NavBar from './components/navBar.jsx'
 import Page from './Page'
-
-
+import AdminCreate from './components/AdminCreate';
 
 function App() {
   return (
@@ -12,7 +11,7 @@ function App() {
       <NavBar/>
       </header>   
       <Page/>
-
+      <AdminCreate></AdminCreate>
     </div>
   );
 }
