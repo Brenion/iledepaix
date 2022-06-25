@@ -21,9 +21,16 @@ const NavBar = ({ title, children, currentPage }) => {
                   
                     {page.name}
                  </NavLink>
+                 
+
                 
               </li>
             ))}
+            <li>
+              <NavLink to="/ToolConnect" >
+                <span className='ml-4'>Formulaire</span>
+              </NavLink>
+            </li>
           </ul>
           </div> 
          <div>
@@ -38,6 +45,8 @@ const NavBar = ({ title, children, currentPage }) => {
                   <NavLink to="/FormConnect" >
                    Connection
                  </NavLink>
+
+                 
              
               </li>
             </ul>

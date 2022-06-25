@@ -1,13 +1,9 @@
-import { useState } from "react";
 import Select from 'react-select'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 
 const FormTool = () => {
-
-
-
 
 const options = [
   { value: 'food', label: 'Agriculture et alimentation' },

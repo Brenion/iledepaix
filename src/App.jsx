@@ -8,6 +8,7 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import NavBar from './components/navBar.jsx'
 import Page from './pages/Page'
 import FormConnect from './pages/FormConnect';
+import ToolConnect from './pages/ToolConnect';
 
 
 function App() {
@@ -24,11 +25,11 @@ function App() {
       <header className="App-header">
         <BrowserRouter>
         <NavBar>
-        <FormTool/>
           
             <Routes>
               <Route path="Page" element={<Page />} />
               <Route path="FormConnect" element={<FormConnect />} />
+              <Route path="ToolConnect" element={<ToolConnect />} />
           </Routes>
         </NavBar>
        </BrowserRouter>
