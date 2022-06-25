@@ -33,21 +33,22 @@ const Search = () => {
     //     };
        
     // }
-     
+     let info = infos.infos;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(`ceci fonctionne :${infos.infos}`);
-        const res = await fetch('http://localhost:8000',{
-            method:'POST',
-            body:JSON.stringify(infos.infos),
-            headers:{
-             Accept: 'application/json',
-            'Content-Type': 'application/json'
-          }
-            });
-            // const data = await res.json();
-            console.log(res);
+        console.log(`${infos.infos}`);
+        console.log(info);
+    //     const res = await fetch('http://localhost:8000',{
+    //         method:'POST',
+    //         body:JSON.stringify(infos.infos),
+    //         headers:{
+    //          Accept: 'application/json',
+    //         'Content-Type': 'application/json'
+    //       }
+    //         });
+    //         // const data = await res.json();
+    //         console.log(res);
       };
 
     return(
