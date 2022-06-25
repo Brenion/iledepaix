@@ -33,7 +33,7 @@ const NavBar = ({ title, children, currentPage }) => {
                 {isConnect ? (
                   <NavLink to="/logout">Connection</NavLink>
                 ) : (
-                  <NavLink to="/FormNewNGO">Connection</NavLink>
+                  <NavLink to="/ConnectForm">Connection</NavLink>
                 )}
                 {/* <NavLink to="/FormNewNGO">Connection</NavLink> */}
               </li>

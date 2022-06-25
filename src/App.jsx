@@ -24,8 +24,8 @@ function App() {
           <main>
             <Routes>
               <Route path="Page" element={<Page />} />
-              <Route path="FormConnect" element={<FormTool />} />
-              <Route path="FormNewNGO" element={<ConnectForm />} />
+              <Route path="FormTool" element={<FormTool />} />
+              <Route path="ConnectForm" element={<ConnectForm />} />
               <Route path="logout" element={<Logout />} />
             </Routes>
           </main>
