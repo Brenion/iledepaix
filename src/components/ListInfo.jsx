@@ -1,4 +1,5 @@
 const ListInfo = () =>{
+    
     return (
         <div>
                 <div className='bg-[#b27d71]   rounded-md ml-4 my-4 h-40 mr-16 '>
