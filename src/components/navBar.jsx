@@ -34,7 +34,7 @@ const NavBar = ({ title, children, currentPage }) => {
           </div>
           <div>
             <ul className="flex text-xl m-4 items-center">
-              <li className="m-2 py-2 px-6 bg-[#b27d71] text-white rounded-3xl ">
+              <li className="m-2 py-2 px-6 bg-[#b27d71] text-white rounded-3xl hover:border hover:bg-[#efdddc] border-[#b27d71] hover:text-[#b27d71]">
                 <a href="/">Faire un don</a>
               </li>
               <li className="m-2 text-[#b27d71] duration:200 hover:text-black">
