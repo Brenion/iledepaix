@@ -31,11 +31,10 @@ const NavBar = ({ title, children, currentPage }) => {
               </li>
               <li className="m-2 text-[#b27d71] duration:200 hover:text-black">
                 {isConnect ? (
-                  <NavLink to="/logout">Connection</NavLink>
+                  <NavLink to="/logout">Deconnection</NavLink>
                 ) : (
                   <NavLink to="/ConnectForm">Connection</NavLink>
                 )}
-                {/* <NavLink to="/FormNewNGO">Connection</NavLink> */}
               </li>
             </ul>
           </div>

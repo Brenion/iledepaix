@@ -1,12 +1,12 @@
 import React from "react";
-import { UseState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const FormNewNGO = () => {
-  const [error] = UseState(null);
+  const [error] = useState(null);
   const onChange = "";
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mt-8">
       <div className="flex flex-col bg-[#CBABA2] w-3/4 justify-center p-4 rounded text-black">
         <h1 className="my-8 text-3xl font-medium pl-6">
           Formulaire d'inscription ONG
@@ -45,7 +45,7 @@ const FormNewNGO = () => {
               Numéro de téléphone:
             </label>
             <input
-              type="tel"
+              type="text"
               className="px-2 py-1 m-2 rounded block"
               name="phoneNumber"
               onChange={onChange}
