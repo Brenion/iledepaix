@@ -79,7 +79,7 @@ const ConnectForm = () => {
             >
               Login
             </button>
-            <Link to="/FormNewNGO"> Nouveau? enregistrez-vous</Link>
+            <Link to="/AdminCreate"> Nouveau? enregistrez-vous</Link>
           </div>
         </form>
       </div>
