@@ -1,17 +1,18 @@
 import React from "react";
-import { UseState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const FormNewNGO = () => {
-  const [error] = UseState(null);
+  const [error] = useState(null);
   const onChange = "";
   return (
-    <div className="flex justify-center">
-      <div className="flex flex-col bg-[#CBABA2] w-3/4 justify-center p-4 rounded text-black">
+    <div className="flex justify-center mt-8 backgroundImage[hero-pattern]">
+      <div className=" bg-[#CBABA2] justify-center p-4 rounded text-black">
         <h1 className="my-8 text-3xl font-medium pl-6">
           Formulaire d'inscription ONG
         </h1>
         <form
+          className="grid grid-cols-2"
           onSubmit={async (e) => {
             e.preventDefault();
           }}
@@ -45,7 +46,7 @@ const FormNewNGO = () => {
               Numéro de téléphone:
             </label>
             <input
-              type="tel"
+              type="text"
               className="px-2 py-1 m-2 rounded block"
               name="phoneNumber"
               onChange={onChange}
@@ -75,18 +76,20 @@ const FormNewNGO = () => {
               onChange={onChange}
             />
           </div>
-
+        </form>
+        <div className="flex flex-col items-center">
           <button
             type="submit"
-            className="p-2 m-4 rounded bg-[#b27d71] hover:bg-[#75534b] text-white"
+            className="p-2 m-4 w-1/4 rounded bg-[#b27d71] hover:bg-[#75534b] text-white"
           >
             Enregistrer
           </button>
+
           <div className="text-left mt-2 m-l-20">
             {"Are you already user?"}
             <Link to="/ConnectForm">Login</Link>
           </div>
-        </form>
+        </div>
       </div>
       {error && (
         <div style={{ color: "tomato" }}>{JSON.stringify(error, null, 2)}</div>
