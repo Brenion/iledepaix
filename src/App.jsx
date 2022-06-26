@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import NavBar from "./components/navBar.jsx";
 import Page from "./pages/Page";
-
+import Sidebar from "./components/Sidebar";
 import FormTool from "./components/FormTool";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import IsConnectContext from "./services/isConnect.context";
@@ -13,6 +13,7 @@ import AdminCreate from "./components/AdminCreate";
 import FormNewNGO from "./components/FormNewNGO";
 import ListInfo from "./components/ListInfo";
 import UpdatePasswordForm from "./components/UpdatePasswordForm";
+import Footer from "./components/Footer";
 
 function App() {
   const [isConnect, setIsConnect] = useState(false);
@@ -25,7 +26,12 @@ function App() {
     <IsConnectContext.Provider value={contextConnect}>
       <Router>
         <div className="App">
-          <NavBar></NavBar>
+          <NavBar>
+            {" "}
+            <div id="navBar">
+              <Sidebar pageWrapId={"pushRotate"} outerContainerId={"navBar"} />
+            </div>
+          </NavBar>
           <main>
             <Routes>
               <Route path="Page" element={<Page />} />
@@ -43,6 +49,7 @@ function App() {
             </Routes>
           </main>
         </div>
+        <Footer />
       </Router>
     </IsConnectContext.Provider>
   );

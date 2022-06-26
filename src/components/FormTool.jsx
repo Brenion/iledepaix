@@ -83,7 +83,7 @@ const FormTool = () => {
     <div
       className="flex justify-center h-screen"
       style={{
-        backgroundImage: `url("https://www.ilesdepaix.org/wp-content/uploads/2021/10/51004205535_5fef2f89f3_o-1600x900.jpg")`,
+        backgroundImage: `url("https://www.ilesdepaix.org/wp-content/uploads/2021/09/idp_banner_default-1600x900.jpg")`,
       }}
     >
       <div className="flex flex-col bg-[#efdddc] w-3/2 justify-center p-4 rounded-md text-gray-800 items-center mt-2 border-2 border-[#755342] opacity-95">

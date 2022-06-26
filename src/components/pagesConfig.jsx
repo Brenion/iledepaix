@@ -28,6 +28,8 @@ const pagesConfig = [
     url: "/agir",
     currentPage: "agir",
   },
+
+  
 ];
 
 export default pagesConfig;

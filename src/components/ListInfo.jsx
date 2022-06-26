@@ -1,9 +1,9 @@
 const ListInfo = () => {
   return (
     <div>
-      <div className="bg-[#efdddc]   rounded-md ml-4 my-4 h-60 mr-16 border border-black ">
+      <div className="bg-[#b27d71]   rounded-md ml-4 my-4 h-60 mr-16 border border-black ">
         <div className="ml-4">
-          <h2 className=" mb-4">Titre de l'outil</h2>
+          <h2 className="text-white mb-4">Titre de l'outil</h2>
           <span>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad magnam
             debitis harum tempora repellendus ipsum fugit, in atque modi.Dusto
