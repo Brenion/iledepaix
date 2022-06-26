@@ -1,54 +1,54 @@
-import Select from 'react-select';
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
+import Select from "react-select";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 const FormTool = () => {
   const options = [
-    { value: 'food', label: 'Agriculture et alimentation' },
-    { value: 'commerce', label: 'Commerce équitable' },
-    { value: 'droit', label: "Droits de l'enfant et droits humain" },
-    { value: 'developper', label: 'Développement durable' },
-    { value: 'education', label: 'Êducation à la diversité' },
-    { value: 'water', label: 'Environnement, eau et climat' },
-    { value: 'genre', label: 'Genre' },
-    { value: 'pice', label: 'Conflits et paix' },
-    { value: 'handicap', label: 'Handicap' },
-    { value: 'migrate', label: 'Migrations et réfugiés' },
-    { value: 'world', label: 'Mondialisation' },
-    { value: 'value', label: 'Valeur' },
+    { value: "food", label: "Agriculture et alimentation" },
+    { value: "commerce", label: "Commerce équitable" },
+    { value: "droit", label: "Droits de l'enfant et droits humain" },
+    { value: "developper", label: "Développement durable" },
+    { value: "education", label: "Êducation à la diversité" },
+    { value: "water", label: "Environnement, eau et climat" },
+    { value: "genre", label: "Genre" },
+    { value: "pice", label: "Conflits et paix" },
+    { value: "handicap", label: "Handicap" },
+    { value: "migrate", label: "Migrations et réfugiés" },
+    { value: "world", label: "Mondialisation" },
+    { value: "value", label: "Valeur" },
   ];
 
   const MyComponent = () => <Select options={options} />;
 
   const formik = useFormik({
     initialValues: {
-      Name: '',
-      Subtitle: '',
-      IsDigitalTool: '',
-      IsNewTool: '',
-      MinAge: '',
-      MaxAge: '',
-      ToolType: '',
-      StartDate: '',
-      EndDate: '',
-      Price: '',
-      Description: '',
+      Name: "",
+      Subtitle: "",
+      IsDigitalTool: "",
+      IsNewTool: "",
+      MinAge: "",
+      MaxAge: "",
+      ToolType: "",
+      StartDate: "",
+      EndDate: "",
+      Price: "",
+      Description: "",
       Thematics: [],
     },
     validationSchema: Yup.object({
       Name: Yup.string()
         .required("Le titre de l'outil est requis")
-        .max(50, 'Le titre doit faire maximum 50 caractères'),
-      Subtitle: Yup.string().required('Le sous-titre est requis'),
-      IsDigitalTool: Yup.string().required('Vous devez faire un choix'),
-      IsNewTool: Yup.string().required('Vous devez faire un choix'),
+        .max(50, "Le titre doit faire maximum 50 caractères"),
+      Subtitle: Yup.string().required("Le sous-titre est requis"),
+      IsDigitalTool: Yup.string().required("Vous devez faire un choix"),
+      IsNewTool: Yup.string().required("Vous devez faire un choix"),
       MinAge: Yup.number(),
       MaxAge: Yup.number(),
       Price: Yup.number(),
       ToolType: Yup.string().required("Le type d'outil est requis"),
       StartDate: Yup.date(),
       EndDate: Yup.date(),
-      Description: Yup.string().required('La description est requise'),
+      Description: Yup.string().required("Le type est requis"),
       Thematics: Yup.array().min(1),
     }),
     onSubmit: (values) => {

@@ -1,15 +1,66 @@
-
+import { useState } from "react";
 
 
 const Search = () => {
+    const [ infos, setSignup] = useState('');
+    
+      const handleChange = (e) => {
+        const val = e.target.value;
+        const key = e.target.name;
+        setSignup((prev) => {
+          const newState = {    
+            ...prev,
+            [key]: val,
+          };
+          return newState;
+        });
+      };
+
+       
+    //   const Jokes = () => {
+    //     const [joke, setJoke] = useState({});
+    //     const getData = async () => {
+    //       const res = await fetch('http://localhost:8000',{
+    //       method:'POST',
+    //       body:JSON.stringify(infos.infos),
+    //       headers:{
+    //        Accept: 'application/json',
+    //       'Content-Type': 'application/json'
+    //     }
+    //       });
+    //       const data = await res.json();
+    //       setJoke(data);
+    //     };
+       
+    // }
+     let info = infos.infos;
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log(`${infos.infos}`);
+        console.log(info);
+    //     const res = await fetch('http://localhost:8000',{
+    //         method:'POST',
+    //         body:JSON.stringify(infos.infos),
+    //         headers:{
+    //          Accept: 'application/json',
+    //         'Content-Type': 'application/json'
+    //       }
+    //         });
+    //         // const data = await res.json();
+    //         console.log(res);
+      };
+
+
+
    
 
     return(
-        <div className="w-80 bg-[#b27d71] rounded-md m-4 h-full">
-            <form action="" className="flex flex-col w-20">
+        <div className="w-80 bg-[#efdddc] rounded-md m-4 h-full">
+            <form action="" className="flex flex-col w-20" onSubmit={handleSubmit}>
                 <div className="flex">
                     
-                <input type="text" name="infos" id="infos" placeholder="Recherche" className="ml-2 rounded-md mt-2 w-20"/>
+                <input type="text" name="infos" id="infos" placeholder="Recherche" className="ml-2 rounded-md mt-2 w-20" onChange={handleChange}  />
                         </div>
                 
                 
@@ -44,6 +95,7 @@ const Search = () => {
             </select>
             </form>
                 <button
+                    onClick={handleSubmit}
                     type="submit"
                     className="px-4 p-1 mt-4 ml-2  mb-2 text-white bg-gray-500 rounded-sm">
                         Rechercher
