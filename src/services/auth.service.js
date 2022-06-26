@@ -1,21 +1,21 @@
 import axios from "axios";
 const API_URL = "http://localhost:7015/api/users/";
 class AuthService {
-  login(username, password) {
-    console.log(username, password);
-    localStorage.setItem("user", JSON.stringify({ accessToken: "test" }));
+  login(email, password) {
+    console.log(email, password);
+    // localStorage.setItem("user", JSON.stringify({ accessToken: "test" }));
     // Le code qui suit est à décommenter et à adapter avec le back
-    // return axios
-    //   .post(API_URL + "login", {
-    //     email,
-    //     password,
-    //   })
-    //   .then((response) => {
-    //     if (response.data.accessToken) {
-    //       localStorage.setItem("user", JSON.stringify(response.data));
-    //     }
-    //     return response.data;
-    //   });
+    return axios
+      .post(API_URL + "login", {
+        email,
+        password,
+      })
+      .then((response) => {
+        if (response.data.token) {
+          localStorage.setItem("user", JSON.stringify(response.data));
+        }
+        return response.data;
+      });
     // Le bakc se présentera p-e comme ceci
     /**
      * {
