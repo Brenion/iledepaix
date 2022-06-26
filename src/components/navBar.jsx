@@ -43,7 +43,6 @@ const NavBar = ({ title, children, currentPage }) => {
                 ) : (
                   <NavLink to="/ConnectForm">Connexion</NavLink>
                 )}
-                {/* <NavLink to="/FormNewNGO">Connection</NavLink> */}
               </li>
             </ul>
           </div>
