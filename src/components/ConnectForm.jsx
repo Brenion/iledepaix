@@ -30,9 +30,16 @@ const ConnectForm = () => {
   });
 
   return (
-    <div className="flex justify-center mt-8">
-      <div className="bg-[#efdddc] flex flex-col w-1/2 h-60 justify-center items-center  border border-gray-400 rounded-md">
-        <h2 className="text-yellow-600 text-2xl mb-2">Connexion</h2>
+    <div
+      className="flex justify-center h-screen"
+      style={{
+        backgroundImage: `url("https://www.ilesdepaix.org/wp-content/uploads/2021/09/idp_banner_default-1600x900.jpg")`,
+      }}
+    >
+      <div className="bg-[#efdddc] flex flex-col w-1/2 h-96 mt-12 justify-center items-center rounded-md border-2 border-[#755342] opacity-95">
+        <h2 className="text-gray-800 text-3xl mb-2 font-bold underline">
+          Connexion
+        </h2>
         <form
           className="flex flex-col items-center"
           onSubmit={(e) => {
@@ -46,7 +53,7 @@ const ConnectForm = () => {
               name="email"
               id=""
               placeholder="Email"
-              className="w-80"
+              className="w-80 px-2 py-1 my-2 rounded focus:outline-none focus:ring-2 focus:ring-[#755342] block"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
@@ -62,7 +69,7 @@ const ConnectForm = () => {
               name="password"
               id=""
               placeholder=""
-              className="w-80 mt-4"
+              className="w-80 mt-4 px-2 py-1 my-2 rounded focus:outline-none focus:ring-2 focus:ring-[#755342] block"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
@@ -75,11 +82,14 @@ const ConnectForm = () => {
           <div className="block">
             <button
               type="submit"
-              className="rounded-2xl bg-[#b27d71] w-32 h-14 text-white mt-4"
+              className="rounded-2xl w-32 h-14 text-white m-4 bg-[#b27d71] hover:bg-[#755342] p-2 text-lg"
             >
               Login
             </button>
-            <Link to="../FormNewNGO"> Nouveau? enregistrez-vous</Link>
+            <Link to="/FormNewNGO" className="text-[#755342]">
+              {" "}
+              Nouveau? enregistrez-vous
+            </Link>
           </div>
         </form>
       </div>

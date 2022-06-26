@@ -81,7 +81,7 @@ const FormTool = () => {
 
   return (
     <div
-      className="flex justify-center"
+      className="flex justify-center h-screen"
       style={{
         backgroundImage: `url("https://www.ilesdepaix.org/wp-content/uploads/2021/09/idp_banner_default-1600x900.jpg")`,
       }}

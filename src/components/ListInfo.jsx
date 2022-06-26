@@ -25,13 +25,13 @@ const ListInfo = () => {
                 d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
               />
             </svg>
-            <li className="w-16 h-8 bg-slate-400 mr-4 rounded-md mt-4 text-center hover:bg-lime-500 cursor-pointer">
+            <li className="w-16 h-8  mr-4 rounded-md mt-4 text-center bg-[#b27d71] hover:bg-[#755342] text-white cursor-pointer">
               tag
             </li>
-            <li className="w-16 h-8 bg-slate-400 mr-4 rounded-md mt-4 text-center hover:bg-lime-500 cursor-pointer">
+            <li className="w-16 h- mr-4 rounded-md mt-4 text-center bg-[#b27d71] hover:bg-[#755342] text-white cursor-pointer">
               tag
             </li>
-            <li className="w-16 h-8 bg-slate-400 mr-4 rounded-md mt-4   text-center hover:bg-lime-500 cursor-pointer">
+            <li className="w-16 h-8 mr-4 rounded-md mt-4   text-center bg-[#b27d71] hover:bg-[#755342] text-white cursor-pointer">
               tag
             </li>
           </ul>
