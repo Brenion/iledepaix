@@ -81,10 +81,11 @@ const FormTool = () => {
 
   return (
     <div
-      className="flex justify-center"
+      className="flex justify-center h-screen"
       style={{
-        backgroundImage: `url("https://www.ilesdepaix.org/wp-content/uploads/2021/09/idp_banner_default-1600x900.jpg")`,
-      }}>
+        backgroundImage: `url("https://www.ilesdepaix.org/wp-content/uploads/2021/10/51004205535_5fef2f89f3_o-1600x900.jpg")`,
+      }}
+    >
       <div className="flex flex-col bg-[#efdddc] w-3/2 justify-center p-4 rounded-md text-gray-800 items-center mt-2 border-2 border-[#755342] opacity-95">
         <h1 className="my-8 text-3xl font-bold underline text-center">
           Formulaire d'outil
@@ -326,7 +327,8 @@ const FormTool = () => {
             <button
               type="submit"
               className="bg-[#b27d71] hover:bg-[#755342] p-2 mt-4 w-48 rounded text-white"
-              onClick={buttonQuiAfficheLesDonnesDuFormulaire}>
+              onClick={buttonQuiAfficheLesDonnesDuFormulaire}
+            >
               Enregistrer
             </button>
           </div>
