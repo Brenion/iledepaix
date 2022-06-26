@@ -13,6 +13,7 @@ import AdminCreate from "./components/AdminCreate";
 import FormNewNGO from "./components/FormNewNGO";
 import ListInfo from "./components/ListInfo";
 import UpdatePasswordForm from "./components/UpdatePasswordForm";
+import Footer from "./components/Footer";
 
 function App() {
   const [isConnect, setIsConnect] = useState(false);
@@ -43,6 +44,7 @@ function App() {
             </Routes>
           </main>
         </div>
+        <Footer />
       </Router>
     </IsConnectContext.Provider>
   );
